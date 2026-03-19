@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mathar Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #0f172a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px;
+            background: linear-gradient(to right, #1e3a8a, #9333ea);
+        }
+
+        section {
+            padding: 25px 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            border-bottom: 2px solid #9333ea;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .skills span {
+            background: #9333ea;
+            padding: 8px 15px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 20px;
+        }
+
+        /* 🔥 PROJECT GRID */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 15px;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #9333ea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+        }
+
+        /* 🔥 MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header>
+    <h1>Mathar Chikkandar</h1>
+    <p>Full Stack Developer 🚀</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        Passionate Full Stack Developer with hands-on experience in building scalable and real-time web applications using React, Spring Boot, and MySQL.
+        Developed multiple end-to-end projects including Ecommerce, Hotel Booking, and Job Portal systems with secure authentication, REST APIs, and payment integration.
+    </p>
+    <p>
+        Strong in backend development, API design, and database management with the ability to build responsive and user-friendly interfaces.
+        Highly motivated to learn new technologies and deliver efficient, high-quality software solutions.
+    </p>
+</section>
+
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+        <h3>Full Stack Development Trainee</h3>
+        <p><b>GUVI</b></p>
+        <p>
+            Developed full-stack web applications using React and Spring Boot.
+            Implemented REST APIs, JWT authentication, and integrated MySQL database.
+            Worked on real-time projects including Ecommerce, Hotel Booking, and Job Portal applications.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+
+    <p><b>Frontend:</b></p>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>React</span>
+    </div>
+
+    <p><b>Backend:</b></p>
+    <div class="skills">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>REST API</span>
+        <span>JWT Auth</span>
+    </div>
+
+    <p><b>Database:</b></p>
+    <div class="skills">
+        <span>MySQL</span>
+    </div>
+
+    <p><b>Tools:</b></p>
+    <div class="skills">
+        <span>Postman</span>
+        <span>Git</span>
+        <span>Docker</span>
+    </div>
+</section>
+
+<!-- 🔥 FIXED PROJECT SECTION -->
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Hotel Booking App</h3>
+            <p>• Developed a full-stack hotel booking application enabling users to search hotels and book rooms.</p>
+            <p><b>Tech:</b> React, Spring Boot, MySQL, Razorpay</p>
+            <img src="hotel.png.png">
+            <a class="btn" href="#">GitHub</a>
+        </div>
+
+        <div class="card">
+            <h3>Ecommerce App</h3>
+            <p>• Built a full-stack e-commerce platform for product browsing and cart management.</p>
+            <p><b>Tech:</b> React, Spring Boot, MySQL</p>
+            <img src="ecommerce.png.png">
+            <a class="btn" href="#">GitHub</a>
+        </div>
+
+        <div class="card">
+            <h3>JobConnect App</h3>
+            <p>• Developed a job portal connecting job seekers with recruiters.</p>
+            <p><b>Tech:</b> React, Spring Boot, MySQL</p>
+            <img src="job.png.png">
+            <a class="btn" href="#">GitHub</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: aijthmathar@gmail.com</p>
+    <p>GitHub: github.com/aijthmathar-sys</p>
+    <p>LinkedIn: linkedin.com/in/mathar-chikkandar-2184093ab/</p>
+</section>
+
+<footer>
+    <p>© 2026 Mathar Portfolio</p>
+</footer>
+
+</body>
+</html>
