@@ -2,11 +2,9 @@
 <html>
 <head>
 <title>Mathar Portfolio</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 <style>
-
 body{
     font-family:'Poppins',sans-serif;
     margin:0;
@@ -23,17 +21,12 @@ nav{
     position:sticky;
     top:0;
 }
-
 nav a{
     color:white;
     margin:0 15px;
     text-decoration:none;
-    font-size:17px;
 }
-
-nav a:hover{
-    color:#9333ea;
-}
+nav a:hover{color:#9333ea;}
 
 /* HEADER */
 header{
@@ -41,17 +34,11 @@ header{
     padding:100px 20px;
     background:linear-gradient(to right,#1e3a8a,#9333ea);
 }
-
 h1{font-size:50px;}
 h2{font-size:30px;border-left:5px solid #9333ea;padding-left:10px;}
 h3{font-size:22px;}
+p{line-height:1.8;}
 
-p{
-    font-size:18px;
-    line-height:1.8;
-}
-
-/* SECTION */
 section{
     padding:60px 30px;
     max-width:1100px;
@@ -65,12 +52,6 @@ section{
     border-radius:15px;
     margin-top:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.5);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 10px 30px rgba(147,51,234,0.6);
 }
 
 /* GRID */
@@ -94,25 +75,10 @@ img{
     display:inline-block;
     margin-top:10px;
     padding:10px 18px;
-    background:linear-gradient(to right,#9333ea,#6366f1);
+    background:#9333ea;
     color:white;
     text-decoration:none;
     border-radius:8px;
-}
-
-/* CERT */
-.cert-container{
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-}
-
-.cert-card{
-    min-width:250px;
-    background:#1e293b;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
 }
 
 /* SUB SKILLS */
@@ -121,13 +87,36 @@ img{
     font-size:16px;
 }
 
+/* CERT SLIDER (NO DUPLICATE) */
+.cert-container{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    padding-bottom:10px;
+    scroll-behavior:smooth;
+}
+.cert-container::-webkit-scrollbar{
+    height:8px;
+}
+.cert-container::-webkit-scrollbar-thumb{
+    background:#9333ea;
+    border-radius:10px;
+}
+.cert-card{
+    min-width:320px;
+    flex-shrink:0;
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+}
+
 /* FOOTER */
 footer{
     text-align:center;
     padding:20px;
     background:#020617;
 }
-
 </style>
 </head>
 
@@ -149,11 +138,19 @@ footer{
 <p>Full Stack Developer 🚀</p>
 </header>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<p>Passionate Full Stack Developer building scalable applications using React, Spring Boot, and MySQL.</p>
+<div class="card">
+<p>• Full Stack Developer with experience in React, Spring Boot, and MySQL.</p>
+<p>• Built real-time projects like Hotel Booking, Ecommerce, and Job Portal systems.</p>
+<p>• Strong in backend development, REST API design, and database optimization.</p>
+<p>• Solved 250+ coding problems improving logical thinking and problem solving.</p>
+<p>• Passionate about building scalable and efficient applications.</p>
+</div>
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
 <div class="card">
@@ -165,36 +162,39 @@ footer{
 </div>
 </section>
 
+<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
-
 <div class="card">
 
+<p><b>Core Java:</b> OOP, Collections, Exception Handling, Multithreading</p>
+<p class="sub">• Strong Java fundamentals • Object-Oriented Design • Problem Solving</p>
+
 <p><b>Frontend:</b> HTML, CSS, React</p>
-<p class="sub">• Responsive Design • Flexbox • Grid • UI Styling • Media Queries</p>
+<p class="sub">• Responsive Design • Flexbox • Grid • UI Styling</p>
 
 <p><b>Backend:</b> Java, Spring Boot</p>
-<p class="sub">• REST API • JWT Authentication • Exception Handling • MVC Architecture</p>
+<p class="sub">• REST API • JWT Authentication • MVC Architecture</p>
 
 <p><b>Database:</b> MySQL</p>
-<p class="sub">• CRUD Operations • Query Optimization • Joins • Indexing Basics</p>
+<p class="sub">• CRUD • Joins • Query Optimization</p>
 
 <p><b>Tools:</b> Git, Postman, Docker</p>
-<p class="sub">• API Testing • Version Control • GitHub • Container Basics</p>
+<p class="sub">• API Testing • GitHub • Container Basics</p>
 
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
 <h2>Main Projects</h2>
-
 <div class="projects">
 
 <div class="card">
 <h3>Hotel Booking App</h3>
 <p>• Improved booking efficiency by 40%</p>
 <p>• Reduced API response time by 30%</p>
-<p>• JWT authentication system</p>
+<p>• Implemented secure JWT authentication</p>
 <img src="hotel.png.png">
 <a class="btn" href="https://github.com/aijthmathar-sys/hotelbookingback" target="_blank">GitHub</a>
 </div>
@@ -203,7 +203,7 @@ footer{
 <h3>Ecommerce App</h3>
 <p>• Increased performance by 30%</p>
 <p>• Reduced load time by 25%</p>
-<p>• Secure cart system</p>
+<p>• Secure cart and order management</p>
 <img src="ecommerce.png.png">
 <a class="btn" href="https://github.com/aijthmathar-sys/ecommerce" target="_blank">GitHub</a>
 </div>
@@ -211,8 +211,8 @@ footer{
 <div class="card">
 <h3>JobConnect App</h3>
 <p>• Improved UX by 35%</p>
-<p>• Reduced backend time</p>
-<p>• Multi-user system</p>
+<p>• Reduced backend processing time</p>
+<p>• Multi-user job application system</p>
 <img src="job.png.png">
 <a class="btn" href="https://github.com/aijthmathar-sys/jobconnect" target="_blank">GitHub</a>
 </div>
@@ -220,15 +220,15 @@ footer{
 </div>
 </section>
 
+<!-- MINI -->
 <section id="mini">
 <h2>Mini Projects</h2>
-
 <div class="projects">
 
 <div class="card">
 <h3>Calculator</h3>
 <p>• Real-time calculations</p>
-<p>• Responsive UI</p>
+<p>• Responsive UI design</p>
 <img src="calculator.png.png">
 </div>
 
@@ -242,19 +242,24 @@ footer{
 </div>
 </section>
 
+<!-- CERTIFICATE (SLIDER WITHOUT DUPLICATE) -->
 <section id="cert">
 <h2>Certificates</h2>
 
 <div class="cert-container">
+
 <div class="cert-card">
+<a href="https://www.zenclass.in/certificateDownload/3Yr2jHwhztHV6sYQ?download=true target="_blank">
 <img src="guvi-cert.png.png">
-<p>GUVI Full Stack</p>
-<a class="btn" href="https://www.zenclass.in/certificateDownload/3Yr2jHwhztHV6sYQ?download=true" target="_blank">View</a>
-</div>
+</a>
+<p>GUVI Full Stack Development</p>
+<a class="btn" href="https://www.zenclass.in/certificateDownload/3Yr2jHwhztHV6sYQ?download=true" target="_blank">View Certificate</a>
 </div>
 
+</div>
 </section>
 
+<!-- ACHIEVEMENTS -->
 <section id="achieve">
 <h2>Achievements</h2>
 <div class="card">
@@ -264,19 +269,12 @@ footer{
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact</h2>
-
 <p>Email: aijthmathar@gmail.com</p>
-
-<p>GitHub:
-<a href="https://github.com/aijthmathar-sys" target="_blank" style="color:#9333ea;">github.com/aijthmathar-sys</a>
-</p>
-
-<p>LinkedIn:
-<a href="https://linkedin.com/in/mathar-chikkandar-2184093ab/" target="_blank" style="color:#9333ea;">LinkedIn Profile</a>
-</p>
-
+<p>GitHub: <a href="https://github.com/aijthmathar-sys" target="_blank" style="color:#9333ea;">github.com/aijthmathar-sys</a></p>
+<p>LinkedIn: <a href="https://linkedin.com/in/mathar-chikkandar-2184093ab/" target="_blank" style="color:#9333ea;">LinkedIn Profile</a></p>
 </section>
 
 <footer>
