@@ -1,224 +1,324 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mathar Portfolio</title>
+<title>Mathar Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            background: #0f172a;
-            color: white;
-            line-height: 1.6;
-        }
+<style>
 
-        nav {
-            background: black;
-            padding: 15px;
-            text-align: center;
-        }
+/* 🔥 GLOBAL */
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#0f172a,#020617);
+    color:white;
+    font-size:24px; /* 🔥 BIG */
+}
 
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* NAV */
+nav{
+    background:rgba(0,0,0,0.9);
+    padding:20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
 
-        header {
-            text-align: center;
-            padding: 60px;
-            background: linear-gradient(to right, #1e3a8a, #9333ea);
-        }
+nav a{
+    color:white;
+    margin:0 20px;
+    text-decoration:none;
+    font-size:22px; /* 🔥 BIG */
+    font-weight:600; /* 🔥 BOLD */
+}
 
-        section {
-            padding: 25px 40px;
-            max-width: 1000px;
-            margin: auto;
-        }
+/* HEADER */
+header{
+    text-align:center;
+    padding:140px 20px;
+    background:linear-gradient(to right,#1e3a8a,#9333ea);
+}
 
-        h2 {
-            border-bottom: 2px solid #9333ea;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
+h1{
+    font-size:72px; /* 🔥 VERY BIG */
+    font-weight:800;
+}
 
-        .skills span {
-            background: #9333ea;
-            padding: 8px 15px;
-            margin: 5px;
-            display: inline-block;
-            border-radius: 20px;
-        }
+header p{
+    font-size:28px;
+    font-weight:500;
+}
 
-        /* 🔥 PROJECT GRID */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+/* HEADINGS */
+h2{
+    font-size:42px;
+    border-left:8px solid #9333ea;
+    padding-left:15px;
+    margin-bottom:35px;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 15px;
-            transition: 0.3s;
-            height: 100%;
-        }
+h3{
+    font-size:28px;
+    font-weight:600;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-        }
+/* TEXT */
+p{
+    font-size:22px;
+    line-height:2.4; /* 🔥 MORE SPACE */
+    margin-bottom:20px;
+}
 
-        img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+/* SECTION */
+section{
+    padding:100px 70px;
+    max-width:1300px;
+    margin:auto;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 8px 15px;
-            background: #9333ea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+/* CARD */
+.card{
+    background:rgba(30,41,59,0.85);
+    padding:45px;
+    border-radius:20px;
+    margin-top:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.7);
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #020617;
-        }
+/* PROJECT GRID */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    gap:35px;
+}
 
-        /* 🔥 MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
-            }
-        }
+/* IMAGE */
+img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:15px;
+    margin-top:20px;
+}
 
-    </style>
+/* BUTTON */
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:14px 25px;
+    font-size:20px;
+    background:linear-gradient(to right,#9333ea,#6366f1);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+
+/* SUB SKILLS */
+.sub{
+    color:#c4b5fd;
+    font-size:22px; /* 🔥 BIG */
+    line-height:2.4;
+}
+
+/* CERT */
+.cert-container{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+}
+
+.cert-card{
+    min-width:320px;
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    font-size:20px;
+    background:#020617;
+}
+
+</style>
 </head>
 
 <body>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#mini">Mini</a>
+<a href="#cert">Certificates</a>
+<a href="#achieve">Achievements</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <header>
-    <h1>Mathar Chikkandar</h1>
-    <p>Full Stack Developer 🚀</p>
+<h1>Mathar Chikkandar</h1>
+<p>Full Stack Developer 🚀</p>
 </header>
 
 <section id="about">
-    <h2>About Me</h2>
-    <p>
-        Passionate Full Stack Developer with hands-on experience in building scalable and real-time web applications using React, Spring Boot, and MySQL.
-        Developed multiple end-to-end projects including Ecommerce, Hotel Booking, and Job Portal systems with secure authentication, REST APIs, and payment integration.
-    </p>
-    <p>
-        Strong in backend development, API design, and database management with the ability to build responsive and user-friendly interfaces.
-        Highly motivated to learn new technologies and deliver efficient, high-quality software solutions.
-    </p>
+<h2>About Me</h2>
+
+<div class="card">
+
+<p>
+• Full Stack Developer with hands-on experience in building scalable web applications using React, Spring Boot, and MySQL.
+</p>
+
+<p>
+• Developed end-to-end real-world projects including Hotel Booking, Ecommerce, and Job Portal systems with secure authentication and REST APIs.
+</p>
+
+<p>
+• Strong in backend development, API design, and database optimization for high performance applications.
+</p>
+
+<p>
+• Solved 250+ coding problems, demonstrating strong problem-solving and logical thinking skills.
+</p>
+
+<p>
+• Passionate about learning new technologies and building efficient, user-friendly applications.
+</p>
+
+</div>
 </section>
 
 <section id="experience">
-    <h2>Experience</h2>
-    <div class="card">
-        <h3>Full Stack Development Trainee</h3>
-        <p><b>GUVI</b></p>
-        <p>
-            Developed full-stack web applications using React and Spring Boot.
-            Implemented REST APIs, JWT authentication, and integrated MySQL database.
-            Worked on real-time projects including Ecommerce, Hotel Booking, and Job Portal applications.
-        </p>
-    </div>
+<h2>Experience</h2>
+<div class="card">
+<h3>Full Stack Development Trainee</h3>
+<p><b>GUVI</b></p>
+<p>• Developed full-stack applications using React and Spring Boot.</p>
+<p>• Implemented REST APIs, JWT authentication, and MySQL integration.</p>
+<p>• Improved performance and reduced response time.</p>
+</div>
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
+<h2>Skills</h2>
 
-    <p><b>Frontend:</b></p>
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>React</span>
-    </div>
+<div class="card">
 
-    <p><b>Backend:</b></p>
-    <div class="skills">
-        <span>Java</span>
-        <span>Spring Boot</span>
-        <span>REST API</span>
-        <span>JWT Auth</span>
-    </div>
+<p><b>Frontend:</b> HTML, CSS, React</p>
+<p class="sub">• Responsive Design • Flexbox • Grid • UI Styling • Media Queries</p>
 
-    <p><b>Database:</b></p>
-    <div class="skills">
-        <span>MySQL</span>
-    </div>
+<p><b>Backend:</b> Java, Spring Boot</p>
+<p class="sub">• REST API • JWT Authentication • Exception Handling • MVC Architecture</p>
 
-    <p><b>Tools:</b></p>
-    <div class="skills">
-        <span>Postman</span>
-        <span>Git</span>
-        <span>Docker</span>
-    </div>
+<p><b>Database:</b> MySQL</p>
+<p class="sub">• CRUD Operations • Query Optimization • Joins • Indexing Basics</p>
+
+<p><b>Tools:</b> Git, Postman, Docker</p>
+<p class="sub">• API Testing • Version Control • GitHub • Container Basics</p>
+
+</div>
 </section>
 
-<!-- 🔥 FIXED PROJECT SECTION -->
 <section id="projects">
-    <h2>Projects</h2>
+<h2>Main Projects</h2>
 
-    <div class="projects">
+<div class="projects">
 
-        <div class="card">
-            <h3>Hotel Booking App</h3>
-            <p>• Developed a full-stack hotel booking application enabling users to search hotels and book rooms.</p>
-            <p><b>Tech:</b> React, Spring Boot, MySQL, Razorpay</p>
-            <img src="hotel.png.png">
-            <a class="btn" href="#">GitHub</a>
-        </div>
+<div class="card">
+<h3>Hotel Booking App</h3>
+<p>• Improved booking efficiency by 40%</p>
+<p>• Reduced API response time by 30%</p>
+<p>• JWT authentication system</p>
+<img src="hotel.png.png">
+<a class="btn" href="https://github.com/aijthmathar-sys/hotelbookingback" target="_blank">GitHub</a>
+</div>
 
-        <div class="card">
-            <h3>Ecommerce App</h3>
-            <p>• Built a full-stack e-commerce platform for product browsing and cart management.</p>
-            <p><b>Tech:</b> React, Spring Boot, MySQL</p>
-            <img src="ecommerce.png.png">
-            <a class="btn" href="#">GitHub</a>
-        </div>
+<div class="card">
+<h3>Ecommerce App</h3>
+<p>• Increased performance by 30%</p>
+<p>• Reduced load time by 25%</p>
+<p>• Secure cart system</p>
+<img src="ecommerce.png.png">
+<a class="btn" href="https://github.com/aijthmathar-sys/ecommerce" target="_blank">GitHub</a>
+</div>
 
-        <div class="card">
-            <h3>JobConnect App</h3>
-            <p>• Developed a job portal connecting job seekers with recruiters.</p>
-            <p><b>Tech:</b> React, Spring Boot, MySQL</p>
-            <img src="job.png.png">
-            <a class="btn" href="#">GitHub</a>
-        </div>
+<div class="card">
+<h3>JobConnect App</h3>
+<p>• Improved UX by 35%</p>
+<p>• Reduced backend time</p>
+<p>• Multi-user system</p>
+<img src="job.png.png">
+<a class="btn" href="https://github.com/aijthmathar-sys/jobconnect" target="_blank">GitHub</a>
+</div>
 
-    </div>
+</div>
+</section>
 
+<section id="mini">
+<h2>Mini Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Calculator</h3>
+<p>• Real-time calculations</p>
+<p>• Responsive UI</p>
+<img src="calculator.png.png">
+</div>
+
+<div class="card">
+<h3>Resume Builder</h3>
+<p>• Real-time preview</p>
+<p>• Improved productivity</p>
+<img src="resume.png.png">
+</div>
+
+</div>
+</section>
+
+<section id="cert">
+<h2>Certificates</h2>
+
+<div class="cert-container">
+<div class="cert-card">
+<img src="guvi-cert.png.png">
+<p>GUVI Full Stack</p>
+<a class="btn" href="https://www.zenclass.in/certificateDownload/3Yr2jHwhztHV6sYQ?download=true" target="_blank">View</a>
+</div>
+</div>
+
+</section>
+
+<section id="achieve">
+<h2>Achievements</h2>
+<div class="card">
+<p>• Solved 250+ coding problems</p>
+<p>• Strong problem-solving skills</p>
+<p>• Consistent coding practice</p>
+</div>
 </section>
 
 <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: aijthmathar@gmail.com</p>
-    <p>GitHub: github.com/aijthmathar-sys</p>
-    <p>LinkedIn: linkedin.com/in/mathar-chikkandar-2184093ab/</p>
+<h2>Contact</h2>
+
+<p>Email: aijthmathar@gmail.com</p>
+
+<p>GitHub:
+<a href="https://github.com/aijthmathar-sys" target="_blank" style="color:#9333ea;">github.com/aijthmathar-sys</a>
+</p>
+
+<p>LinkedIn:
+<a href="https://www.linkedin.com/in/mathar-chikkandar-2184093ab/" target="_blank" style="color:#9333ea;">LinkedIn Profile</a>
+</p>
+
 </section>
 
 <footer>
-    <p>© 2026 Mathar Portfolio</p>
+<p>© 2026 Mathar Portfolio</p>
 </footer>
 
 </body>
